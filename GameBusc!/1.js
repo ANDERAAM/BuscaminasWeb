@@ -11,14 +11,31 @@ function Inicio(){
 
 function TableroF(){
   document.getElementById("CTOTAL").style.display="none";
-  for(var i=0;i<=10;i++){
-  for(var p=0;p<=10;p++){
-  var bloque = document.createElement("div");
-  bloque.id=i+"."+p;
-  TableroCompleto.appendChild(div);
-  bloque.setAttribute('class','Bloque');
-  document.getElementById("TableroCompleto").innerHTML=bloque;
+  var c=0;
+  var body = document.getElementsByTagName("body")[0];
+  var tabla = document.createElement("table");
+  var tblBody = document.createElement("tbody");
+  for (var i = 0; i < 4; i++) {
+  var fila = document.createElement("tr");
+  for (var j = 0; j < 4; j++) {
+  var celda = document.createElement("td");
+  var Blo   = document.createElement("img");
+  Blo.src="Bloque.png";
+  celda.appendChild(Blo);c++;
+  celda.setAttribute("id","Blo"+c).onclick=Click();
+  fila.appendChild(celda);
+  //objeto.addEventListener(evento, funcion, momento);
   }
+  tblBody.appendChild(fila);
   }
+  tabla.appendChild(tblBody);
+  TableroCompleto.appendChild(tabla);
+  tabla.setAttribute('class','Tabla');
+  tabla.setAttribute('border','2');
+}
+
+function Click(){
+
 alert("Hola_Mundo");
+
 }
