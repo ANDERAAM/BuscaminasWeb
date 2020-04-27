@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  </head>
+  <body>
+   <div id="TableroCompleto"></div>
+  </body>
+  <script type="text/javascript">
+
+   var Bom     = document.createElement("img");
+   var body    = document.getElementsByTagName("body")[0];
+   var tabla   = document.createElement("table");
+   var tblBody = document.createElement("tbody");
+
+   for (var i = 0; i < 6; i++) {
+   var fila = document.createElement("tr");
+   for (var j = 0; j < 6; j++) {
+   var celda = document.createElement("td");
+   var textoCelda = document.createImg
+   celda.appendChild(textoCelda);
+   fila.appendChild(celda);
+   }
+   tblBody.appendChild(fila);
+   }
+   tabla.appendChild(tblBody);
+   TableroCompleto.appendChild(tabla);
+   tabla.setAttribute('class','Tabla');
+   tabla.setAttribute('border','3');
+   var result = document.getElementById("resultado");
+   result.appendChild(tabla);
+  </script>
+  <link rel="stylesheet" href="1.css">
+</html>
