@@ -13,14 +13,13 @@ top:  50px;
 left: 20px;
 }
 .Tabla{
-  
+ text-align: center;
   margin: 0 auto;
 
 }
 #TableroCompleto{
   text-align: center;
   text-align: center;
-  border-style: solid;
   height:200px;
   width: 600px;
 }
