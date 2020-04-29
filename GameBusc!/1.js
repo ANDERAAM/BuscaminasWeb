@@ -22,20 +22,20 @@ function TableroF(){
   var Blo   = document.createElement("img");
   Blo.src="Bloque.png";
   celda.appendChild(Blo);c++;
-  celda.setAttribute("id","Blo"+c).onclick=Click();
+  alert("Hola_Mundo");
+  celda.setAttribute("id","Blo");
+  alert("Hola_Mundo");
+  //document.getElementById('blo').addEventListerner('click',clic,true);
+  //btn.onclick = firstFunction;
   fila.appendChild(celda);
-  //objeto.addEventListener(evento, funcion, momento);
   }
   tblBody.appendChild(fila);
   }
   tabla.appendChild(tblBody);
   TableroCompleto.appendChild(tabla);
   tabla.setAttribute('class','Tabla');
-  tabla.setAttribute('border','2');
+  tabla.setAttribute('border','1');
 }
-
 function Click(){
-
-alert("Hola_Mundo");
-
+  alert("Hola_Mundo");
 }

@@ -6,6 +6,19 @@
    <div id="TableroCompleto"></div>
   </body>
   <script type="text/javascript">
+
+  var aleatorio;
+  var Imagenes =  new Array();
+  Imagenes = 
+
+
+  function GeneradorN(Nivel) {
+  if(Nivel=="Facil"){
+    aleatorio=Math.round(Math.random()*(16-1)+parseInt(1));
+    alert("Número aleatorio entre 1 y 16:"+aleatorio);
+  }
+  }
+
   var c=0;
   var body = document.getElementsByTagName("body")[0];
   var tabla = document.createElement("table");
@@ -17,18 +30,37 @@
   var Blo =     document.createElement("img");
   Blo.src="Bloque.png";
   celda.appendChild(Blo);c++;
-  celda.setAttribute("id","Blo"+c);
-  celda.setAttribute("onclick","Click()")
+  var NBlo = "Blo#"+c;
+  //alert(NBlo);
+  celda.setAttribute("id","NBlo")//celda.setAttribute("id","Blo"+c);
+  celda.addEventListener("click", onClick(NBlo));
+  celda.setAttribute("click",onClick);
   fila.appendChild(celda);
   }
   tblBody.appendChild(fila);
   }
   tabla.appendChild(tblBody);
   TableroCompleto.appendChild(tabla);
-  tabla.setAttribute('class','Tabla');
-  tabla.setAttribute('border','2');
+  tabla.setAttribute('Class','Tabla');
+  tabla.setAttribute('border','10');
+  function onClick(Numero) {
+
+// alert(Numero+"Este es el numero aleatorio : "+Math.round(Math.random()*(16-1)+parseInt(1)));
+   //
+  };
 
 
+/*
+foo.addEventListener("click", onClick);
+
+function onClick(event) {
+  // the `event` parameter is the event object
+  // e.g. `event.type` would be "click" in this case
+};
+
+
+
+ */
 
 
 
