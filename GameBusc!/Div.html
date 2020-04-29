@@ -8,33 +8,32 @@
   <script type="text/javascript">
 
   var aleatorio;
-  var Imagenes =  new Array();
-  Imagenes = 
-
 
   function GeneradorN(Nivel) {
-  if(Nivel=="Facil"){
+   if(Nivel=="Facil"){
     aleatorio=Math.round(Math.random()*(16-1)+parseInt(1));
     alert("Número aleatorio entre 1 y 16:"+aleatorio);
-  }
-  }
+  }}
 
   var c=0;
+
   var body = document.getElementsByTagName("body")[0];
   var tabla = document.createElement("table");
   var tblBody = document.createElement("tbody");
+
   for (var i = 0; i < 4; i++) {
-  var fila = document.createElement("tr");
+  var fila  = document.createElement("tr");
   for (var j = 0; j < 4; j++) {
-  var celda = document.createElement("td");
-  var Blo =     document.createElement("img");
+  var celda =  document.createElement("td");
+  var Blo   =  document.createElement("img");
   Blo.src="Bloque.png";
-  celda.appendChild(Blo);c++;
-  var NBlo = "Blo#"+c;
-  //alert(NBlo);
-  celda.setAttribute("id","NBlo")//celda.setAttribute("id","Blo"+c);
-  celda.addEventListener("click", onClick(NBlo));
-  celda.setAttribute("click",onClick);
+  celda.appendChild(Blo);
+  c++; var NBlo = "NBlo1";
+  celda.setAttribute("id","NBlo");
+  celda.onclick=function(){
+    alert("HOLA_MUNDO");
+
+  }
   fila.appendChild(celda);
   }
   tblBody.appendChild(fila);
@@ -43,27 +42,6 @@
   TableroCompleto.appendChild(tabla);
   tabla.setAttribute('Class','Tabla');
   tabla.setAttribute('border','10');
-  function onClick(Numero) {
-
-// alert(Numero+"Este es el numero aleatorio : "+Math.round(Math.random()*(16-1)+parseInt(1)));
-   //
-  };
-
-
-/*
-foo.addEventListener("click", onClick);
-
-function onClick(event) {
-  // the `event` parameter is the event object
-  // e.g. `event.type` would be "click" in this case
-};
-
-
-
- */
-
-
-
   </script>
   <link rel="stylesheet" href="1.css">
 </html>
